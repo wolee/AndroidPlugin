@@ -1,0 +1,40 @@
+<idea-plugin version="2">
+    <id>sg.bigo.protocol.plugin</id>
+    <name>BIGO Protocol Plugin</name>
+    <version>1.0</version>
+    <vendor email="lijianfeng@yy.com" url="http://www.bigo.sg">BIGO Inc</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="ProtocolManager.Plugin" class="sg.bigo.android.plugin.ProtocolMgrPlugin" text="Protocol Manager"
+                description="Protocol Manager" icon="/icons/icon.png" >
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="before"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup" />
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta P" replace-all="true"/>
+        </action>
+    </actions>
+
+</idea-plugin>
